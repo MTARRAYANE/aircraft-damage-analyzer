@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aircraft Damage Analyzer ✈️</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<h2>✈️ Aircraft Damage Analyzer</h2>
+
+<form method="POST" enctype="multipart/form-data">
+    <div class="file-upload-wrapper">
+        <label for="file-input" class="file-upload-label">📁 Choose Image or Drag & Drop</label>
+        <input type="file" id="file-input" name="image" required>
+    </div>
+    <button type="submit">Analyze Damage</button>
+</form>
+
+{% if image_path %}
+    <div class="result-card">
+        <div class="result-label">Classification</div>
+        <div class="result-text">{{ result }}</div>
+        <img src="{{ image_path }}">
+        <p style="margin-top: 20px; color: #718096; font-size: 0.95rem;"><b>Details:</b> {{ caption }}</p>
+    </div>
+{% endif %}
+
+</body>
+</html>
