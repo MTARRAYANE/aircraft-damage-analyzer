@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # ✈️ Aircraft Damage Analyzer
 
 ## 📌 Description
